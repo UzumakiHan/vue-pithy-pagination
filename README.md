@@ -51,8 +51,9 @@ Vue.use(VuePithyPagination)
 ```
 <template>
   <div id="app">
-    <vue-pagination
+    <vue-pithy-pagination
       :allCount="allCount"
+      :pageCount="pageCount"
       @getCurrentPage="getCurrentPage"
       @choosePage="choosePage"
     />
@@ -62,6 +63,7 @@ Vue.use(VuePithyPagination)
 <script>
 export default {
   allCount: 101,
+   pageCount: 10,
   name: "App",
   components: {},
   methods: {
@@ -69,7 +71,7 @@ export default {
       console.log(currentPage);
     },
     choosePage(pageCount) {
-     console.log(pageCount);
+     this.pageCount = pageCount;
     },
   },
 };
@@ -88,7 +90,7 @@ export default {
 |   参数    | 是否必传 |   说明   |  类型  |
 | :-------: | :------: | :------: | :----: |
 | allCount  |    是    |  总条数  | Number |
-| pageCount |    否    | 每页条数 | Number |
+| pageCount |    是    | 每页条数 | Number |
 
 效果：
 
