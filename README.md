@@ -62,22 +62,26 @@ Vue.use(VuePithyPagination)
 
 <script>
 export default {
-  allCount: 101,
-   pageCount: 10,
   name: "App",
+  data() {
+    return {
+      allCount: 101,
+      pageCount: 10,
+    };
+  },
   components: {},
   methods: {
     getCurrentPage(currentPage) {
       console.log(currentPage);
     },
     choosePage(pageCount) {
-     this.pageCount = pageCount;
+      this.pageCount = pageCount;
     },
   },
 };
 </script>
 
-<style lang="scss">
+<style>
 </style>
 
 ```

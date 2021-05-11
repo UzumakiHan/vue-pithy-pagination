@@ -1,6 +1,6 @@
 {
   "name": "vue-pithy-pagination",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "main": "dist/vue-pithy-pagination.umd.min.js",
   "author": {

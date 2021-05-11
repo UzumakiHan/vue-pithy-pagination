@@ -80,7 +80,6 @@ export default {
     };
   },
   mounted() {
-    console.log(this.pageCount);
   },
   props: {
     allCount: {
